@@ -1,7 +1,6 @@
 package com.test.lbc
 
 import com.test.lbc.api.SongApiService
-import com.test.lbc.di.ApplicationModule
 import org.junit.Test
 
 import org.junit.Assert.*
