@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LBC</string>
+    <string name="sortby_album">Sort by album</string>
+    <string name="sortby_title">Sort by title</string>
+</resources>
