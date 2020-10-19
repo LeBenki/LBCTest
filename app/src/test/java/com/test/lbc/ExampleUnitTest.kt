@@ -5,6 +5,8 @@ import com.test.lbc.di.ApplicationModule
 import org.junit.Test
 
 import org.junit.Assert.*
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -14,7 +16,11 @@ import org.junit.Assert.*
 class ExampleUnitTest {
     @Test
     fun test_get_songs_api() {
-/*        val service = ApplicationModule
+        val retrofit  = Retrofit.Builder()
+            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("https://static.leboncoin.fr/img/shared/")
+            .build()
+        val service = retrofit.create(SongApiService::class.java)
 
         val courseRequest = service.getSongs()
 
@@ -24,7 +30,6 @@ class ExampleUnitTest {
             assertEquals(songs.size, 5000)
         } else {
             fail()
-        }*/
-        assertEquals(4, 4)
+        }
     }
 }
